@@ -1,0 +1,587 @@
+
+/* BASIC SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080d1b;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+span {
+    color: #38bdf8;
+}
+
+
+/* HOME SECTION */
+
+.home {
+    min-height: 100vh;
+    padding: 25px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    font-size: 28px;
+}
+
+nav p {
+    color: #94a3b8;
+}
+
+
+/* HERO */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+    width: 100%;
+}
+
+.hero-text {
+    max-width: 580px;
+}
+
+.welcome {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-size: 46px;
+    margin-bottom: 15px;
+}
+
+.hero-text h3 {
+    color: #94a3b8;
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+.intro {
+    color: #cbd5e1;
+    line-height: 1.8;
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+
+
+/* BUTTON */
+
+button {
+    background: #38bdf8;
+    color: #080d1b;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+
+/* PROFILE PHOTO */
+
+.hero-image img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 3px solid #38bdf8;
+    box-shadow: 0 0 30px #38bdf844;
+}
+
+
+/* HOME FOOTER */
+
+.footer-text {
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+/* PORTFOLIO SECTION */
+
+.portfolio {
+    display: none;
+    padding: 25px 8%;
+    min-height: 100vh;
+}
+
+.portfolio-nav {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #253047;
+}
+
+.back-btn {
+    padding: 10px 20px;
+}
+
+
+/* ALL SECTIONS */
+
+.section {
+    max-width: 1000px;
+    margin: 65px auto;
+}
+
+.section h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.section > p {
+    color: #cbd5e1;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+
+/* CARDS */
+
+.info-card,
+.skill-card,
+.project-card {
+    background: #111b30;
+    border: 1px solid #253047;
+    border-radius: 12px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.info-card p {
+    color: #cbd5e1;
+    line-height: 2;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.info-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+
+/* SKILLS */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.skill-card {
+    text-align: center;
+    color: #38bdf8;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* PROJECTS */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.project-card span {
+    font-size: 13px;
+}
+
+
+/* CONTACT */
+
+.contact a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+    border-top: 1px solid #253047;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 250px;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        margin: 45px auto;
+    }
+
+}
+
+
+/* PROJECT BUTTONS */
+
+.project-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.project-buttons a {
+    text-decoration: none;
+    background: #38bdf8;
+    color: #080d1b;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.project-buttons a:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+
+/* NAVIGATION MENU */
+
+.portfolio-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+
+/* HOME PAGE ANIMATION */
+
+.hero-text {
+    animation: fadeUp 1s ease;
+}
+
+.hero-image {
+    animation: fadeUp 1.3s ease;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* PROJECT CARD EFFECT */
+
+.project-card {
+    transition: 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px #38bdf833;
+}
+
+
+/* SKILL CARD EFFECT */
+
+.skill-card {
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    background: #1e293b;
+}
+
+.project-card {
+    transition: all 0.5s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-15px);
+    background-color: red;
+}
+
+/* Portfolio Animation */
+
+.hero-text,
+.hero-image {
+    animation: fadeUp 1s ease-in-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    transition: all 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px #38bdf855;
+}
+
+.hero-text {
+    animation: slideFromLeft 2s ease-out;
+}
+
+.hero-image {
+    animation: slideFromRight 2s ease-out;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-image img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #38bdf8;
+    box-shadow: 0 0 20px #38bdf8;
+    transition: all 0.5s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px #38bdf8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.portfolio-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #080d1b;
+    padding: 15px 5%;
+    box-shadow: 0 3px 15px #38bdf822;
+}
+
+.nav-links a {
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+    text-shadow: 0 0 10px #38bdf8;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+.project-card {
+    background: #111827;
+    border: 1px solid #263449;
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.4s ease;
+}
+
+.project-card:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 0 25px #38bdf855;
+    transform: translateY(-10px);
+}
+
+.project-buttons a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: #080d1b;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.project-buttons a:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive Design */
+
+@media screen and (max-width: 768px) {
+
+    .portfolio-nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .project-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .project-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .portfolio-nav h2 {
+        font-size: 22px;
+    }
+}
+
+
+
+
+
